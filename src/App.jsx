@@ -1,0 +1,26 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import UnlistedSharesPage from "./pages/UnlistedSharesPage";
+import FaqsPage from "./pages/FaqsPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/UnlistedShares" element={<UnlistedSharesPage />} />
+        <Route path="/Faqs" element={<FaqsPage />} />
+        <Route path="/ContactUs" element={<ContactUsPage />} />
+        <Route path="/AboutUs" element={<AboutUsPage />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+}
+
+export default App;
