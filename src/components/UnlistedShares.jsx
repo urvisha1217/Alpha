@@ -51,7 +51,7 @@ const UnlistedShares = () => {
       </div>
 
       {/* Floating Icons (FIXED) */}
-      <div className="absolute 2xl:right-[340px] 2xl:bottom-[500px] xl:right-[30px] xl:bottom-[500px]  right-6 bottom-9 flex lg:flex-col gap-4 z-50">
+      <div className="absolute 2xl:right-[240px] 2xl:bottom-[500px] xl:right-[30px] xl:bottom-[500px]  right-6 bottom-9 flex lg:flex-col gap-4 z-50">
         {/* Chat Icon */}
         <button className="bg-[#1699B1] text-white md:p-4 p-3  rounded-full shadow-md">
           <HiOutlineUserGroup className="text-2xl" />

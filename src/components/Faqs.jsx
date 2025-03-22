@@ -107,7 +107,7 @@ const Faqs = () => {
       </div>
 
       {/* Floating Icons */}
-      <div className="absolute 2xl:right-[330px] 2xl:bottom-[900px] xl:right-[13px] xl:bottom-[500px]  right-6 bottom-2 flex xl:flex-col gap-4 z-50">
+      <div className="absolute 2xl:right-[240px] 2xl:bottom-[900px] xl:right-[13px] xl:bottom-[500px]  right-6 bottom-2 flex xl:flex-col gap-4 z-50">
         <button className="bg-[#1699B1] text-white md:p-4 p-3  rounded-full shadow-md">
           <HiOutlineUserGroup className="text-2xl" />
         </button>
