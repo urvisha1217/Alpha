@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import Marquee from "react-fast-marquee";
+import { motion, AnimatePresence } from "framer-motion";
 
-const slides = [
-  { text: "Unlisted Shares, Pre-IPO & Startups : One platform" },
-  { text: "Invest in High-Growth Startups & Private Companies" },
-  { text: "Your Gateway to Exclusive Investment Opportunities" },
-];
+const beforeColon = "Unlisted Shares, Pre-IPO & Startups :";
+const afterColonTexts = ["One platform", "Multiple Brokers", "Best Deals"];
 
 const logos = [
   "/images/vivo.png",
@@ -19,12 +17,13 @@ const logos = [
 ];
 
 export default function HeroSection({ direction = "left", speed = 50 }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000); // Change slide every 3 seconds
+      setCurrentIndex((prev) => (prev + 1) % afterColonTexts.length);
+    }, 4000); // Change text every 4 seconds
+
     return () => clearInterval(interval);
   }, []);
 
@@ -41,11 +40,40 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
       /> */}
 
         {/* Overlaying Text */}
-        <div className="absolute inset-0 flex items-center justify-center text-center p-6 z-10">
+        {/* <div className="absolute inset-0 flex items-center justify-center text-center p-6 z-10">
           <h1 className="text-xl md:text-3xl font-bold ">
             {slides[currentSlide].text}
           </h1>
+        </div> */}
+      <div className="absolute inset-0 flex items-center justify-center text-center p-6 z-10">
+      <h1 className="text-xl md:text-3xl font-bold flex items-center">
+        {/* Static Before-Colon Text - Moves in ONCE and Stays Fixed */}
+        <motion.span
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="mr-2 whitespace-nowrap"
+        >
+          {beforeColon}
+        </motion.span>
+
+        {/* Dynamic After-Colon Text - Smoothly Fades & Slides */}
+        <div className="relative w-[300px] h-[70px] overflow-hidden flex items-center">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={currentIndex}
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -30, opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="absolute left-0"
+            >
+              {afterColonTexts[currentIndex]}
+            </motion.span>
+          </AnimatePresence>
         </div>
+      </h1>
+    </div>
 
         {/* Action Buttons */}
         <div className="absolute bottom-6 right-6 flex flex-col space-y-3 z-10">

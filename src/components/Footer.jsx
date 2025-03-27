@@ -13,7 +13,11 @@ const Footer = () => {
         {/* Left Section - Logo and Copyright */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/3 mb-6 md:mb-0">
           <div className="flex items-center gap-2 mb-2">
-            <img src="/images/logo2.png" alt="Alpha Capital Logo" className="h-27" />
+            <img
+              src="/images/logo2.png"
+              alt="Alpha Capital Logo"
+              className="h-27"
+            />
           </div>
           <p className="text-md text-black">
             Copyright © 2025. Alfa Capital. All rights reserved.
@@ -24,10 +28,18 @@ const Footer = () => {
         <div className="text-center md:text-left w-full md:w-1/4 mb-6 md:mb-0">
           <h3 className="font-bold text-lg mb-3">Links</h3>
           <ul className="text-lg space-y-2">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/UnlistedShares">Unlisted Stocks List</Link></li>
-            <li><Link to="/AboutUs">About</Link></li>
-            <li><Link to="/ContactUs">Contact</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/UnlistedShares">Unlisted Stocks List</Link>
+            </li>
+            <li>
+              <Link to="/AboutUs">About</Link>
+            </li>
+            <li>
+              <Link to="/ContactUs">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -35,16 +47,46 @@ const Footer = () => {
         <div className="text-center md:text-left w-full md:w-1/4 ">
           <h3 className="font-bold text-lg mb-3">Policy</h3>
           <ul className="text-lg space-y-2">
-            <li><Link to="/PrivacyPolicy">Privacy Policy</Link></li>
-            <li><Link to="/TermsConditions">Terms & Conditions</Link></li>
-            <li><Link to="/Disclaimer">Disclaimer</Link></li>
-            <li><Link to="/Faqs">FAQs</Link></li>
+            <li>
+              {" "}
+              <a
+                href="/Alpha_capital.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="/Alpha_capital.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms & Conditions
+              </a>
+            </li>
+            <li>
+              <a
+                href="/Alpha_capital.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <Link to="/Faqs">FAQs</Link>
+            </li>
           </ul>
         </div>
 
         {/* Back to Top Icon */}
         <div className="flex items-center justify-center md:justify-end w-full md:w-auto mt-8 md:mt-0">
-          <div className="bg-green-500 p-4 rounded-full text-white cursor-pointer" onClick={scrollToTop}>
+          <div
+            className="bg-green-500 p-4 rounded-full text-white cursor-pointer"
+            onClick={scrollToTop}
+          >
             <FaChevronUp className="text-xl" />
           </div>
         </div>
@@ -54,4 +96,3 @@ const Footer = () => {
 };
 
 export default Footer;
-  
