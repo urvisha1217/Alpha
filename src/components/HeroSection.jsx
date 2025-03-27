@@ -45,35 +45,35 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
             {slides[currentSlide].text}
           </h1>
         </div> */}
-      <div className="absolute inset-0 flex items-center justify-center text-center p-6 z-10">
-      <h1 className="text-xl md:text-3xl font-bold flex items-center">
-        {/* Static Before-Colon Text - Moves in ONCE and Stays Fixed */}
-        <motion.span
-          initial={{ x: "-100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="mr-2 whitespace-nowrap"
-        >
-          {beforeColon}
-        </motion.span>
-
-        {/* Dynamic After-Colon Text - Smoothly Fades & Slides */}
-        <div className="relative w-[300px] h-[70px] overflow-hidden flex items-center">
-          <AnimatePresence mode="wait">
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 z-10">
+          <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold flex flex-wrap justify-center items-center max-w-full">
+            {/* Static Before-Colon Text - Moves in ONCE and Stays Fixed */}
             <motion.span
-              key={currentIndex}
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -30, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              className="absolute left-0"
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              className="mr-2 whitespace-nowrap"
             >
-              {afterColonTexts[currentIndex]}
+              {beforeColon}
             </motion.span>
-          </AnimatePresence>
+
+            {/* Dynamic After-Colon Text - Smoothly Fades & Slides */}
+            <div className="relative w-[240px] md:w-[250px] lg:w-[300px] h-[30px] sm:h-[40px] md:h-[50px] lg:h-[60px] overflow-hidden flex items-center justify-center sm:justify-start">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentIndex}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -30, opacity: 0 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="absolute left-0 sm:left-auto text-[#1699B1] font-bold text-center sm:text-left w-full"
+                >
+                  {afterColonTexts[currentIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+          </h1>
         </div>
-      </h1>
-    </div>
 
         {/* Action Buttons */}
         <div className="absolute bottom-6 right-6 flex flex-col space-y-3 z-10">

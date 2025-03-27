@@ -2,8 +2,11 @@ import React from "react";
 import { FaCheckCircle, FaLightbulb, FaBullseye } from "react-icons/fa";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigate = useNavigate(); // Initialize navigate function
+
   return (
     <>
       {/* About Us Section */}
@@ -312,7 +315,8 @@ const AboutUs = () => {
         <p className="text-lg sm:text-xl md:text-3xl font-semibold">
         Interested in investing in unlisted shares? Get started today! 
         </p>
-        <button className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition ">
+        <button className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
+        onClick={() => navigate("/ContactUs")}>
         Get in touch
         </button>
       </div>
@@ -330,7 +334,7 @@ const AboutUs = () => {
             <p className="text-xl md:text-2xl font-semibold text-gray-900 mb-4">
               Need clarity? We’ve answered it all for you! - explore our FAQs!
             </p>
-            <button className="bg-[#1699B1] text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition">
+            <button className="bg-[#1699B1] text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition" onClick={() => navigate("/Faqs")}>
               Click here for FAQs
             </button>
           </div>
