@@ -153,7 +153,7 @@ const Faqs = () => {
               )}
             </button>
             {openIndex === index && faq.answer && (
-              <div className="px-5 py-1  bg-[#EBEBEB] rounded-b-lg text-md">
+              <div className="px-5 py-1  bg-[#EBEBEB] rounded-b-lg md:text-md text-xs">
                 {faq.answer}
               </div>
             )}
