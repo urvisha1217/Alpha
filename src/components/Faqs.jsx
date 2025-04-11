@@ -49,11 +49,21 @@ const faqs = [
     question: "How to buy unlisted shares?",
     answer: (
       <>
-        <span className="font-semibold">1️⃣ Connect with Us:</span> Inquire about the Unlisted/Pre-IPO shares you're interested in. <br />
-        <span className="font-semibold">2️⃣ Get a Quote:</span> We provide current market rates (subject to availability). <br />
-        <span className="font-semibold">3️⃣ Confirm & Payment:</span> Agree on price & quantity, and we share our bank details (bank transfer only). <br />
-        <span className="font-semibold">4️⃣ Provide Demat Details:</span> Transfer funds & share your <span className="font-semibold">Demat account details</span> for processing. <br />
-        <span className="font-semibold">5️⃣ Share Transfer:</span> Once funds are received, shares are transferred within <span className="font-semibold">1 working day</span> to your Demat account.
+        <span className="font-semibold">1️⃣ Connect with Us:</span> Inquire about
+        the Unlisted/Pre-IPO shares you're interested in. <br />
+        <span className="font-semibold">2️⃣ Get a Quote:</span> We provide
+        current market rates (subject to availability). <br />
+        <span className="font-semibold">3️⃣ Confirm & Payment:</span> Agree on
+        price & quantity, and we share our bank details (bank transfer only).{" "}
+        <br />
+        <span className="font-semibold">4️⃣ Provide Demat Details:</span>{" "}
+        Transfer funds & share your{" "}
+        <span className="font-semibold">Demat account details</span> for
+        processing. <br />
+        <span className="font-semibold">5️⃣ Share Transfer:</span> Once funds are
+        received, shares are transferred within{" "}
+        <span className="font-semibold">1 working day</span> to your Demat
+        account.
       </>
     ),
   },
@@ -153,7 +163,7 @@ const Faqs = () => {
               )}
             </button>
             {openIndex === index && faq.answer && (
-              <div className="px-5 py-1  bg-[#EBEBEB] rounded-b-lg md:text-md text-xs">
+              <div className="px-5 py-1  bg-[#EBEBEB] rounded-b-lg md:text-lg text-xs">
                 {faq.answer}
               </div>
             )}
@@ -162,12 +172,23 @@ const Faqs = () => {
       </div>
 
       {/* Floating Icons */}
-      <div className="absolute 2xl:right-[240px] 2xl:bottom-[900px] xl:right-[13px] xl:bottom-[500px]  right-6 bottom-2 flex xl:flex-col gap-4 z-50">
-        <button className="bg-[#1699B1] text-white md:p-4 p-3  rounded-full shadow-md">
-          <HiOutlineUserGroup className="text-2xl" />
+      <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
+        <button
+          className="md:p-4 p-2 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
+          onClick={() =>
+            window.open(
+              "https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX",
+              "_blank"
+            )
+          }
+        >
+          <HiOutlineUserGroup className="md:text-2xl text-xl" />
         </button>
-        <button className="bg-[#16A569] text-white md:p-4 p-3 rounded-full shadow-md">
-          <BsWhatsapp className="text-2xl" />
+        <button
+          className="md:p-4 p-2 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
+          onClick={() => window.open("https://wa.me/1234567890", "_blank")} // replace with real number when needed
+        >
+          <BsWhatsapp className="md:text-2xl text-xl" />
         </button>
       </div>
     </div>

@@ -44,7 +44,7 @@ const AboutUs = () => {
             investment goals. Your success is our priority, so invest with
             confidence through our streamlined and reliable services.
           </p>
-          <p className="text-[#999] mb-4 text-justify text-lg xl:text-xl">
+          <p className="text-[#999]  text-justify text-lg xl:text-xl">
             At Alpha Capital, we bridge the gap between investors and brokers,
             offering a streamlined platform for unlisted shares, pre-IPO shares,
             and startup investments. Our integrated platform ensures you benefit
@@ -54,16 +54,35 @@ const AboutUs = () => {
         </div>
 
         {/* Floating Icons */}
-        <div className="w-fit flex lg:flex-col gap-3 md:gap-4 md:pt-0 z-30">
+        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
+          <button
+            className="md:p-4 p-2 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
+            onClick={() =>
+              window.open(
+                "https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX",
+                "_blank"
+              )
+            }
+          >
+            <HiOutlineUserGroup className="md:text-2xl text-xl" />
+          </button>
+          <button
+            className="md:p-4 p-2 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
+            onClick={() => window.open("https://wa.me/1234567890", "_blank")} // replace with real number when needed
+          >
+            <BsWhatsapp className="md:text-2xl text-xl" />
+          </button>
+        </div>
+
+        {/* <div className="w-fit flex lg:flex-col gap-3 md:gap-4 md:pt-0 z-30">
           <button className="bg-[#1699B1] text-white md:p-4 p-3 rounded-full shadow-lg lg:mb-4">
             <HiOutlineUserGroup className="text-2xl" />
           </button>
           <button className="bg-[#16A569] text-white md:p-4 p-3 rounded-full shadow-lg">
             <BsWhatsapp className="text-2xl" />
           </button>
-        </div>
+        </div> */}
       </div>
-
       {/* Pre-IPO Investing */}
       <div className="container mx-auto flex flex-col items-center justify-between bg-white p-3 md:py-12">
         <div className="mb-8 lg:mb-12">
@@ -313,11 +332,13 @@ const AboutUs = () => {
       {/* ONE SECTION REMAINING */}
       <div className="bg-[#1597ac] text-white flex flex-col sm:flex-row justify-evenly items-center text-center sm:text-left py-10 px-8">
         <p className="text-lg sm:text-xl md:text-3xl font-semibold">
-        Interested in investing in unlisted shares? Get started today! 
+          Interested in investing in unlisted shares? Get started today!
         </p>
-        <button className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
-        onClick={() => navigate("/ContactUs")}>
-        Get in touch
+        <button
+          className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
+          onClick={() => navigate("/ContactUs")}
+        >
+          Get in touch
         </button>
       </div>
       {/* FAQ Section */}
@@ -334,7 +355,10 @@ const AboutUs = () => {
             <p className="text-xl md:text-2xl font-semibold text-gray-900 mb-4">
               Need clarity? We’ve answered it all for you! - explore our FAQs!
             </p>
-            <button className="bg-[#1699B1] text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition" onClick={() => navigate("/Faqs")}>
+            <button
+              className="bg-[#1699B1] text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition"
+              onClick={() => navigate("/Faqs")}
+            >
               Click here for FAQs
             </button>
           </div>

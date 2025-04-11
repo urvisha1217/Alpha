@@ -27,9 +27,28 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
     return () => clearInterval(interval);
   }, []);
 
+  // Split beforeColon into words, preserving punctuation
+  const beforeColonWords = beforeColon.split(" ");
+
+  // Variants for typewriter effect
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1, // Speed of typing (lower = faster)
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <>
-      <div className="relative w-full h-[60vh] overflow-hidden">
+      <div className="relative w-full h-[85vh] overflow-hidden">
         {/* Background Video as YouTube Embed */}
         {/* <iframe
         className="absolute inset-0 w-full h-full object-cover"
@@ -38,23 +57,31 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         allow="autoplay; fullscreen"
         title="Background Video"
       /> */}
-
-        {/* Overlaying Text */}
-        {/* <div className="absolute inset-0 flex items-center justify-center text-center p-6 z-10">
-          <h1 className="text-xl md:text-3xl font-bold ">
-            {slides[currentSlide].text}
-          </h1>
-        </div> */}
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 z-10">
-          <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold flex flex-wrap justify-center items-center max-w-full">
-            {/* Static Before-Colon Text - Moves in ONCE and Stays Fixed */}
+          <h1 className=" md:text-3xl lg:text-4xl font-bold flex flex-wrap justify-center items-center max-w-full">
+            {/* Typewriter Animation for Before-Colon Text */}
             <motion.span
-              initial={{ x: "-100%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
-              className="mr-2 whitespace-nowrap"
+              className="mr-2 whitespace-nowrap flex"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
             >
-              {beforeColon}
+              {beforeColonWords.map((word, wordIndex) => (
+                <span key={wordIndex} className="flex">
+                  {word.split("").map((letter, letterIndex) => (
+                    <motion.span
+                      key={`${wordIndex}-${letterIndex}`}
+                      variants={letterVariants}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                  {/* Add space after each word except the last one */}
+                  {wordIndex < beforeColonWords.length - 1 && (
+                    <motion.span variants={letterVariants}> </motion.span>
+                  )}
+                </span>
+              ))}
             </motion.span>
 
             {/* Dynamic After-Colon Text - Smoothly Fades & Slides */}
@@ -75,13 +102,25 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
           </h1>
         </div>
 
-        {/* Action Buttons */}
-        <div className="absolute bottom-6 right-6 flex flex-col space-y-3 z-10">
-          <button className="md:p-4 p-3 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg ">
-            <HiOutlineUserGroup className="text-2xl" />
+        {/* Sticky Action Buttons */}
+        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
+          <button
+            className="md:p-4 p-2 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
+            onClick={() =>
+              window.open(
+                "https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX",
+                "_blank"
+              )
+            }
+          >
+            <HiOutlineUserGroup className="md:text-2xl text-xl" />
           </button>
-          <button className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg ">
-            <BsWhatsapp className="text-2xl" />
+
+          <button
+            className="md:p-4 p-2 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
+            onClick={() => window.open("https://wa.me/1234567890", "_blank")} // replace with real number when needed
+          >
+            <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
         </div>
       </div>
@@ -116,9 +155,9 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={`company-${index}`}
-                className="mx-12 flex flex-col items-center justify-center "
+                className="mx-12 flex flex-col items-center justify-center"
               >
-                <div className="hover:grayscale-0 transition-all duration-200 pb-[7rem]">
+                <div className="hover:grayscale-0 transition-all duration-200 pb-[2rem]">
                   <img
                     src={logo || "/placeholder.svg"}
                     alt={`Logo ${index}`}

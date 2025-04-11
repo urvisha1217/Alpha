@@ -116,7 +116,7 @@ export default function IPOPerformance() {
   <div className="flex justify-end pr-30">
     <img src="/images/design.png" className="h-25 w-auto" />
   </div>
-  <h2 className="text-3xl font-semibold text-center">
+  <h2 className="text-3xl font-semibold text-center mb-4">
     Past IPO Performance
   </h2>
   <p className="text-xl text-center text-gray-600 mb-8">

@@ -2,12 +2,18 @@ import React from "react";
 
 const ContactPoster = () => {
   return (
-    <div className="w-full md:h-full h-[100px] ">
+    <div className="relative w-full h-32 md:h-60 overflow-hidden ">
       <img
-        src="/images/contactPoster.png"
-        alt="Contact"
-        className="h-full w-full"
+        src="/images/contactPoster.png" // replace with actual image path
+        alt="FAQ Background"
+        className="absolute inset-0 w-full h-full object-cover"
       />
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white px-4 text-center">
+        <h1 className="text-2xl md:text-5xl font-bold">Connect with us</h1>
+        <p className="text-sm md:text-3xl mt-1  md:mt-3 tracking-wide">
+          Let's find hidden Multibagger together
+        </p>
+      </div>
     </div>
   );
 };

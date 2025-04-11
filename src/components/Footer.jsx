@@ -16,10 +16,10 @@ const Footer = () => {
             <img
               src="/images/logo2.png"
               alt="Alpha Capital Logo"
-              className="h-27"
+              className="h-20 md:h-27"
             />
           </div>
-          <p className="text-md text-black">
+          <p className="text-sm md:text-md text-black">
             Copyright © 2025. Alfa Capital. All rights reserved.
           </p>
         </div>

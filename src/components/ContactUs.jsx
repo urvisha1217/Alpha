@@ -70,13 +70,25 @@ export default function ContactUs() {
             </button>
           </div>
         </form>
-        <div className="flex flex-row md:flex-col gap-4 px-4">
-          <button className="bg-[#1699B1] text-white md:p-4 p-3 rounded-full">
-            <HiOutlineUserGroup className="text-2xl" />
+        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
+          <button
+            className="md:p-4 p-2 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
+            onClick={() =>
+              window.open(
+                "https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX",
+                "_blank"
+              )
+            }
+          >
+            <HiOutlineUserGroup className="md:text-2xl text-xl" />
           </button>
-          <button className="bg-[#16A569] text-white md:p-4 p-3 rounded-full">
-            <BsWhatsapp className="text-2xl" />
-          </button>
+          <button
+  className="md:p-4 p-2 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
+  onClick={() => window.open('https://wa.me/1234567890', '_blank')} // replace with real number when needed
+>
+  <BsWhatsapp className="md:text-2xl text-xl" />
+</button>
+
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
