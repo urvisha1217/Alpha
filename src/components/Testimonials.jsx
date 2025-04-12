@@ -52,12 +52,15 @@ const Testimonials = () => {
       if (carouselRef.current) {
         const containerWidth = carouselRef.current.offsetWidth;
         // Show 3 cards for all screen sizes
-        const newCardsPerView = 3; // Always show 3 testimonials
+        const newCardsPerView = window.innerWidth < 768 ? 1 : 3; // Always show 3 testimonials
         setCardsPerView(newCardsPerView);
         const newCardWidth = containerWidth / newCardsPerView;
         setCardWidth(newCardWidth);
         // Center the first card of the middle set
-        setScrollPosition(-newCardWidth * testimonials.length - newCardWidth * Math.floor(newCardsPerView / 2));
+        setScrollPosition(
+          -newCardWidth * testimonials.length -
+            newCardWidth * Math.floor(newCardsPerView / 2)
+        );
       }
     };
 
@@ -86,7 +89,11 @@ const Testimonials = () => {
   // Calculate visible index for the center card
   const totalTestimonials = testimonials.length;
   const visibleIndex = cardWidth
-    ? Math.floor(((Math.abs(scrollPosition) + cardWidth * Math.floor(cardsPerView / 2)) / cardWidth) % totalTestimonials)
+    ? Math.floor(
+        ((Math.abs(scrollPosition) + cardWidth * Math.floor(cardsPerView / 2)) /
+          cardWidth) %
+          totalTestimonials
+      )
     : 0;
 
   return (
@@ -125,7 +132,7 @@ const Testimonials = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <div
-                      className={`bg-white rounded-xl shadow-md p-5 lg:p-10 border border-gray-300 w-full h-full flex flex-col justify-between `}
+                      className={`bg-white rounded-xl shadow-md p-5 lg:p-10 border border-gray-300 w-full h-full flex flex-col justify-center `}
                     >
                       <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
                         {testimonial.text}
