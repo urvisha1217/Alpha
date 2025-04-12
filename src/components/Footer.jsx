@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         {/* Right Section - Policy */}
-        <div className="text-center md:text-left w-full md:w-1/4 ">
+        {/* <div className="text-center md:text-left w-full md:w-1/4 ">
           <h3 className="font-bold text-lg mb-3">Policy</h3>
           <ul className="text-lg space-y-2">
             <li>
@@ -70,6 +70,59 @@ const Footer = () => {
               <a
                 href="/Alpha_capital.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
+              >
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <Link to="/Faqs">FAQs</Link>
+            </li>
+          </ul>
+        </div> */}
+        <div className="text-center md:text-left w-full md:w-1/4">
+          <h3 className="font-bold text-lg mb-3">Policy</h3>
+          <ul className="text-lg space-y-2">
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://drive.google.com/drive/folders/1EPKgSLfJsrJ9CtJRdYOLQs28WjQRGydo?usp=drive_link",
+                    "_blank"
+                  );
+                }}
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://drive.google.com/drive/folders/1EPKgSLfJsrJ9CtJRdYOLQs28WjQRGydo?usp=drive_link",
+                    "_blank"
+                  );
+                }}
+                rel="noopener noreferrer"
+              >
+                Terms & Conditions
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://drive.google.com/drive/folders/1EPKgSLfJsrJ9CtJRdYOLQs28WjQRGydo?usp=drive_link",
+                    "_blank"
+                  );
+                }}
                 rel="noopener noreferrer"
               >
                 Disclaimer

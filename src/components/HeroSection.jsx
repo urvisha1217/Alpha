@@ -125,7 +125,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         </div>
       </div>
       <div className="w-full bg-white py-6 lg:py-16">
-        <div className="container mx-auto text-left px-2 lg:px-4">
+        <div className="container mx-auto text-left px-4 lg:px-4">
           <h2 className="text-lg md:text-3xl font-bold text-black text-justify">
             Alpha Capital is India’s #1 multi-broker integrated platform for
             your Unlisted Shares, Startups & Pre-IPO Investment.

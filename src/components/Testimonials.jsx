@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
     text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
     name: "Priya S.1",
     date: "August 10, 2023",
-    location: "",
     image: "/images/person.png",
   },
   {
@@ -26,7 +25,6 @@ const testimonials = [
     text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
     name: "Priya S.4",
     date: "August 10, 2023",
-    location: "",
     image: "/images/person.png",
   },
   {
@@ -44,89 +42,116 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const [centerIndex, setCenterIndex] = useState(1);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [cardWidth, setCardWidth] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(3); // Default 3 cards per view
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const updateCardWidth = () => {
+      if (carouselRef.current) {
+        const containerWidth = carouselRef.current.offsetWidth;
+        // Show 3 cards for all screen sizes
+        const newCardsPerView = 3; // Always show 3 testimonials
+        setCardsPerView(newCardsPerView);
+        const newCardWidth = containerWidth / newCardsPerView;
+        setCardWidth(newCardWidth);
+        // Center the first card of the middle set
+        setScrollPosition(-newCardWidth * testimonials.length - newCardWidth * Math.floor(newCardsPerView / 2));
+      }
+    };
+
+    updateCardWidth();
+    window.addEventListener("resize", updateCardWidth);
+    return () => window.removeEventListener("resize", updateCardWidth);
+  }, []);
 
   const handlePrev = () => {
-    setCenterIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    setScrollPosition((prev) => prev + cardWidth);
   };
 
   const handleNext = () => {
-    setCenterIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    setScrollPosition((prev) => prev - cardWidth);
   };
 
-  const visibleIndices = [
-    (centerIndex - 1 + testimonials.length) % testimonials.length,
-    centerIndex,
-    (centerIndex + 1) % testimonials.length,
-  ];
-
-  const visibleTestimonials = visibleIndices.map(
-    (index) => testimonials[index]
-  );
-
-  const variants = {
-    center: {
-      scale: 1.1,
-      opacity: 1,
-      x: 0,
-      zIndex: 10,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-    side: {
-      scale: 0.9,
-      opacity: 0.75,
-      x: (index) => (index === 0 ? "-20%" : "20%"),
-      zIndex: 5,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-    exit: {
-      scale: 0.8,
-      opacity: 0,
-      x: (direction) => (direction === "left" ? "100%" : "-100%"),
-      transition: { duration: 0.3 },
-    },
+  const handleTransitionEnd = () => {
+    const totalWidth = cardWidth * testimonials.length;
+    if (scrollPosition <= -totalWidth * 2) {
+      setScrollPosition(-totalWidth);
+    } else if (scrollPosition >= 0) {
+      setScrollPosition(-totalWidth);
+    }
   };
+
+  // Calculate visible index for the center card
+  const totalTestimonials = testimonials.length;
+  const visibleIndex = cardWidth
+    ? Math.floor(((Math.abs(scrollPosition) + cardWidth * Math.floor(cardsPerView / 2)) / cardWidth) % totalTestimonials)
+    : 0;
 
   return (
     <div className="bg-[#f0f5fc] min-h-full flex flex-col items-center py-[8%]">
-      <h2 className="md:text-4xl mb-10 text-2xl">What Our Customers Say</h2>
+      <h2 className="md:text-4xl mb-10 text-2xl font-bold">
+        What Our Customers Say
+      </h2>
 
-      <div className="flex gap-10 items-center flex-col lg:flex-row md:w-full md:justify-center p-6 relative">
-        <AnimatePresence initial={false} custom={centerIndex}>
-          {visibleTestimonials.map((testimonial, index) => (
-            <motion.div
-              key={visibleIndices[index]}
-              custom={index}
-              variants={variants}
-              initial="side"
-              animate={index === 1 ? "center" : "side"}
-              exit="exit"
-              className="bg-white rounded-xl shadow-md p-10 md:max-w-lg border border-gray-200 w-full md:w-auto absolute lg:static"
-              style={{
-                left: index === 0 ? "10%" : index === 2 ? "70%" : "40%",
-              }}
-            >
-              <p className="text-base text-gray-700 leading-relaxed">
-                {testimonial.text}
-              </p>
-              <div className="flex items-center mt-6 border-t border-gray-300">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-14 h-14 rounded-full mr-4 mt-4"
-                />
-                <div>
-                  <p className="mt-4 text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.date}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+      <div className="w-full max-w-8xl px-6 overflow-hidden">
+        <div ref={carouselRef} className="relative w-full overflow-hidden">
+          <motion.div
+            className="flex"
+            style={{
+              width: `${cardWidth * totalTestimonials * 3}px`,
+            }}
+            animate={{ x: scrollPosition }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            onAnimationComplete={handleTransitionEnd}
+          >
+            {[...testimonials, ...testimonials, ...testimonials].map(
+              (testimonial, index) => {
+                const adjustedIndex = index % totalTestimonials;
+                const isCenter = adjustedIndex === visibleIndex;
+
+                return (
+                  <motion.div
+                    key={`${testimonial.name}-${index}`}
+                    className="flex-shrink-0 px-1"
+                    style={{
+                      width: cardWidth,
+                    }}
+                    animate={{
+                      scale: isCenter ? 1.0 : 0.85, // More pronounced scale for center
+                      zIndex: isCenter ? 10 : 1,
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div
+                      className={`bg-white rounded-xl shadow-md p-5 lg:p-10 border border-gray-300 w-full h-full flex flex-col justify-between `}
+                    >
+                      <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
+                        {testimonial.text}
+                      </p>
+                      <div className="flex items-center mt-6 border-t border-gray-300 pt-4">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-14 h-14 rounded-full mr-4"
+                        />
+                        <div>
+                          <p className="text-md lg:text-lg font-semibold">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {testimonial.date}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              }
+            )}
+          </motion.div>
+        </div>
       </div>
 
       <div className="flex gap-4 mt-10">
