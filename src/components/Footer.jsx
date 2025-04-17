@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChevronUp } from "react-icons/fa";
+import { FaChevronUp, FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,80 +9,44 @@ const Footer = () => {
 
   return (
     <div className="bg-[#ECECEC] py-10">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-6">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-6 md:px-4 md:gap-5 lg:gap-0 ">
         {/* Left Section - Logo and Copyright */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/3 mb-6 md:mb-0">
           <div className="flex items-center gap-2 mb-2">
             <img
               src="/images/logo2.png"
               alt="Alpha Capital Logo"
-              className="h-20 md:h-27"
+              className="h-20 lg:h-27"
             />
           </div>
           <p className="text-sm md:text-md text-black">
-            Copyright © 2025. Alfa Capital. All rights reserved.
+            Copyright © 2025. Alpha Capital. All rights reserved.
           </p>
         </div>
 
         {/* Center Section - Links */}
         <div className="text-center md:text-left w-full md:w-1/4 mb-6 md:mb-0">
-          <h3 className="font-bold text-lg mb-3">Links</h3>
-          <ul className="text-lg space-y-2">
+          <h3 className="font-bold text-xl mb-3">Links</h3>
+          <ul className="lg:text-lg text-md space-y-2">
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/UnlistedShares">Unlisted Stocks List</Link>
+              <Link to="/UnlistedShares">Unlisted Shares</Link>
             </li>
             <li>
-              <Link to="/AboutUs">About</Link>
+              <Link to="/AboutUs">About us</Link>
             </li>
             <li>
-              <Link to="/ContactUs">Contact</Link>
+              <Link to="/ContactUs">Contact us</Link>
             </li>
           </ul>
         </div>
 
-        {/* Right Section - Policy */}
-        {/* <div className="text-center md:text-left w-full md:w-1/4 ">
-          <h3 className="font-bold text-lg mb-3">Policy</h3>
-          <ul className="text-lg space-y-2">
-            <li>
-              {" "}
-              <a
-                href="/Alpha_capital.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/Alpha_capital.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a
-                href="/Alpha_capital.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Disclaimer
-              </a>
-            </li>
-            <li>
-              <Link to="/Faqs">FAQs</Link>
-            </li>
-          </ul>
-        </div> */}
+        {/* Right Section - Policy */}  
         <div className="text-center md:text-left w-full md:w-1/4">
-          <h3 className="font-bold text-lg mb-3">Policy</h3>
-          <ul className="text-lg space-y-2">
+          <h3 className="font-bold text-xl mb-3">Policy</h3>
+          <ul className="lg:text-lg text-md space-y-2">
             <li>
               <a
                 href="#"
@@ -133,11 +97,37 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
+        {/* Follow Us */}
+        <div className="text-center md:text-left w-full md:w-1/4 ">
+          <h3 className="font-bold text-xl mb-3 md:mt-0 mt-4">Follow Us</h3>
+          <div className="flex justify-center md:justify-start gap-4 lg:text-xl text-md text-black">
+            <a
+              href="https://www.facebook.com/profile.php?id=61574397518484"
+              target="_blank"
+              rel="alpha capital"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/alphacapital.global"
+              target="_blank"
+              rel="alpha capital"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/alphacapital-pvtltd/"
+              target="_blank"
+              rel="alpha capital"
+            >
+              <FaLinkedinIn />
+            </a>
+          </div>
+        </div>
         {/* Back to Top Icon */}
         <div className="flex items-center justify-center md:justify-end w-full md:w-auto mt-8 md:mt-0">
           <div
-            className="bg-green-500 p-4 rounded-full text-white cursor-pointer"
+            className="bg-green-500 p-3 lg:p-4 rounded-full text-white cursor-pointer"
             onClick={scrollToTop}
           >
             <FaChevronUp className="text-xl" />

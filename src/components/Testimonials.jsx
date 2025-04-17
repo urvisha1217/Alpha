@@ -4,41 +4,36 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
-    name: "Priya S.1",
+    text: "I was new to the unlisted market and also afraid of being fraud so I started with a small deal. I am surprised that they transferred the shares within 3 hours. They also guided me about investment procedures throughout this journey. From the first date of transaction to till date, it's almost more than 3 years, I am always getting the best rate from Alpha Capital.",
+    name: "Dharmesh (Surat, Gujarat)",
     date: "August 10, 2023",
-    image: "/images/person.png",
+    image: "/images/person1.png",
   },
   {
-    text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
-    name: "Dharmesh (Surat, Gujarat)2",
+    text: " I'm in this unlisted market even before Alpha Capital started. I was doing deal in my local brokers, but they're charging higher as well as lots of malpractice to sell the shares. I remember the day when I contacted Alpha capital CEO over the call for the first time. I started with a small deal, since that day, I have almost purchased more than 15 lakh worth of shares from Alpha capital. They are very genuine, supportive and the best thing I personally felt about them is, they don't do miss-selling for just sake of commission.",
+    name: "Manishbhai (Rajkot)",
     date: "January 10, 2025",
-    image: "/images/person.png",
+    image: "/images/person1.png",
   },
   {
-    text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
-    name: "Priya S.3",
+    text: "I was recommended to Alpha capital by my brother. I completed multiple deals with Alpha capital. They are doing excellent in terms of service,  the transactions are very smooth and shares also get credited within a few hours. If you are looking for the best rate and don't want to surf around the different brokers' websites, just contact them and I'm sure you will get the best deal on the internet.",
+    name: "Jagdishbhai (Palanpur)",
+    date: "November 10, 2023",
+    image: "/images/person1.png",
+  },
+  {
+    text: "All The deals I have done with them are either on WhatsApp or call. Within just 5 to 10 minutes of discussion with them you will get the best unlisted shares price available on the internet. Good thing which personal experienced is that their team keeps updating you over WhatsApp till you get shares credited in your demat. It's a good platform for you if you're looking for genuine, supportive & trustworthy unlisted & startup investment deals",
+    name: " Prakash Sheth(Mumbai)",
     date: "August 10, 2023",
-    image: "/images/person.png",
+    image: "/images/person1.png",
   },
   {
-    text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
-    name: "Priya S.4",
-    date: "August 10, 2023",
-    image: "/images/person.png",
-  },
-  {
-    text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
-    name: "Dharmesh (Surat, Gujarat)5",
+    text: "I don't have more words to say but if you are looking for a trustworthy platform as well as best deals and fastest delivery, just go for Alpha capital you will never be disappointed, that's my guarantee",
+    name: "Parth Patel (Australia)",
     date: "January 10, 2025",
-    image: "/images/person.png",
+    image: "/images/person1.png",
   },
-  {
-    text: "I’ve never felt more graceful in ethnic wear! The vibrant colors and superior quality make this kurti a must-have. Highly recommended!",
-    name: "Priya S.6",
-    date: "August 10, 2023",
-    image: "/images/person.png",
-  },
+ 
 ];
 
 const Testimonials = () => {
@@ -99,7 +94,7 @@ const Testimonials = () => {
   return (
     <div className="bg-[#f0f5fc] min-h-full flex flex-col items-center py-[8%]">
       <h2 className="md:text-4xl mb-10 text-2xl font-bold">
-        What Our Customers Say
+        What Our Customers Says
       </h2>
 
       <div className="w-full max-w-8xl px-6 overflow-hidden">

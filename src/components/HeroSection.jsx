@@ -5,15 +5,20 @@ import Marquee from "react-fast-marquee";
 import { motion, AnimatePresence } from "framer-motion";
 
 const beforeColon = "Unlisted Shares, Pre-IPO & Startups :";
-const afterColonTexts = ["One platform", "Multiple Brokers", "Best Deals"];
+const afterColonTexts = ["One Platform", "Multiple Brokers", "Best Deals"];
 
 const logos = [
-  "/images/vivo.png",
-  "/images/dell.png",
-  "/images/kia2.png",
-  "/images/puma.png",
-  "/images/amazon3.png",
-  "/images/nutella2.png",
+  "/images/OYO.png",
+  "/images/nsdl.png",
+  "/images/apollo.jpeg",
+  "/images/msei.png",
+  "/images/PD.png",
+  "/images/sbs.jpeg",
+  "/images/ES.png",
+  "/images/onix.png",
+  "/images/hci.png",
+  "/images/HDFC.png",
+  "/images/pm.png",
 ];
 
 export default function HeroSection({ direction = "left", speed = 50 }) {
@@ -48,20 +53,21 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
 
   return (
     <>
-      <div className="relative w-full h-[85vh] overflow-hidden">
+      <div className="relative w-full h-[90vh] overflow-hidden">
         {/* Background Video as YouTube Embed */}
-        {/* <iframe
-        className="absolute inset-0 w-full h-full object-cover"
-        src="https://www.youtube.com/embed/roz9sXFkTuE?autoplay=1&mute=1&loop=1&playlist=roz9sXFkTuE"
-        frameBorder="0"
-        allow="autoplay; fullscreen"
-        title="Background Video"
-      /> */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0  "
+          src="./images/bgOfAlpha.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 z-10">
           <h1 className=" md:text-3xl lg:text-4xl font-bold flex flex-wrap justify-center items-center max-w-full">
             {/* Typewriter Animation for Before-Colon Text */}
             <motion.span
-              className="mr-2 whitespace-nowrap flex"
+              className="mr-2 whitespace-nowrap flex text-white"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -93,7 +99,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -30, opacity: 0 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
-                  className="absolute left-0 sm:left-auto text-[#1699B1] font-bold text-center sm:text-left w-full"
+                  className="absolute left-0 sm:left-auto text-white font-bold text-center sm:text-left w-full"
                 >
                   {afterColonTexts[currentIndex]}
                 </motion.span>
@@ -103,7 +109,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         </div>
 
         {/* Sticky Action Buttons */}
-        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
+        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-40">
           <button
             className="md:p-4 p-3 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
             onClick={() =>
@@ -125,14 +131,14 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         </div>
       </div>
       <div className="w-full bg-white py-6 lg:py-16">
-        <div className="container mx-auto text-left px-4 lg:px-4">
+        <div className="container mx-auto text-left px-4 lg:px-8">
           <h2 className="text-lg md:text-3xl font-bold text-black text-justify">
-            Alpha Capital is India’s #1 multi-broker integrated platform for
-            your Unlisted Shares, Startups & Pre-IPO Investment.
+            Alpha Capital is India’s 1<sup>st</sup> multi-broker integrated
+            platform for your Unlisted Shares, Startups & Pre-IPO Investment.
           </h2>
           <p className="mt-4 text-gray-700 text-sm md:text-lg text-justify">
             At Alpha Capital, we bridge the gap between investors and brokers,
-            offering a streamlined platform for unlisted shares, pre-IPO shares,
+            offering a streamlined Platform for Unlisted Shares, Pre-IPO Shares,
             and startup investments. Our integrated platform ensures you benefit
             from competitive deals through partnerships with trusted brokers. So
             maximize your investment potential with access to the best deals.
@@ -161,7 +167,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
                   <img
                     src={logo || "/placeholder.svg"}
                     alt={`Logo ${index}`}
-                    className="h-15 w-auto object-contain"
+                    className="h-30 w-full object-contain"
                   />
                 </div>
               </div>

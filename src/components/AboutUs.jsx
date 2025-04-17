@@ -3,6 +3,7 @@ import { FaCheckCircle, FaLightbulb, FaBullseye } from "react-icons/fa";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { GiReceiveMoney, GiPieChart, GiChart } from "react-icons/gi";
 
 const AboutUs = () => {
   const navigate = useNavigate(); // Initialize navigate function
@@ -17,7 +18,7 @@ const AboutUs = () => {
           className="hidden md:absolute md:left-0 md:top-85 lg:left-3 lg:bottom-18 xl:bottom-10 md:block"
         />
         {/* Image Section */}
-        <div className="w-full md:w-[80%] lg:w-[40%] xl:w-[35%] mb-4 md:mb-0 z-30">
+        <div className="w-full md:w-[80%] lg:w-[40%] xl:w-[35%] mb-4 md:mb-0 mt-10 z-30">
           <img
             src="/images/about.png"
             alt="Alpha Capital Building"
@@ -46,7 +47,7 @@ const AboutUs = () => {
           </p>
           <p className="text-[#999]  text-justify text-lg xl:text-xl">
             At Alpha Capital, we bridge the gap between investors and brokers,
-            offering a streamlined platform for unlisted shares, pre-IPO shares,
+            offering a streamlined platform for Unlisted Shares, Pre-IPO Shares,
             and startup investments. Our integrated platform ensures you benefit
             from competitive deals through partnerships with trusted brokers.
             Maximize your investment potential with access to the best deals.
@@ -54,9 +55,9 @@ const AboutUs = () => {
         </div>
 
         {/* Floating Icons */}
-        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
+        <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-30">
           <button
-            className="md:p-4 p-2 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
+            className="md:p-4 p-3 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
             onClick={() =>
               window.open(
                 "https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX",
@@ -67,7 +68,7 @@ const AboutUs = () => {
             <HiOutlineUserGroup className="md:text-2xl text-xl" />
           </button>
           <button
-            className="md:p-4 p-2 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
+            className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
             onClick={() => window.open("https://wa.me/1234567890", "_blank")} // replace with real number when needed
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
@@ -88,31 +89,49 @@ const AboutUs = () => {
         <div className="mb-8 lg:mb-12">
           <div className="bg-green-100 px-8 py-4 rounded-full">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center">
-              Why consider pre-IPO investing?
+              Why consider Pre-IPO investing?
             </h2>
           </div>
         </div>
 
-        <div className="w-full flex flex-col md:flex-row justify-between md:items-center gap-8">
-          <div className="flex items-center gap-4">
-            <FaCheckCircle size={32} className="text-green-500" />
-            <span className="text-gray-800 md:text-xl">
-              Potential for higher return
-            </span>
+        <div className="w-full flex flex-col md:flex-row justify-between md:items-center gap-8 text-center">
+          {/* Higher return */}
+          <div className="flex flex-col items-center gap-2">
+            <div className="p-4 bg-blue-100 rounded-full shadow-sm">
+              <GiReceiveMoney size={48} className="text-blue-600" />
+            </div>
+            <div className="flex items-center gap-2">
+              {/* <FaCheckCircle size={20} className="text-green-500" /> */}
+              <span className="text-gray-800 md:text-xl">
+                Potential for higher return
+              </span>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <FaCheckCircle size={32} className="text-green-500" />
-            <span className="text-gray-800 md:text-xl">
-              Portfolio Diversification
-            </span>
+          {/* Portfolio Diversification */}
+          <div className="flex flex-col items-center gap-2">
+            <div className="p-4 bg-purple-100 rounded-full shadow-sm">
+              <GiPieChart size={48} className="text-purple-600" />
+            </div>
+            <div className="flex items-center gap-2">
+              {/* <FaCheckCircle size={20} className="text-green-500" /> */}
+              <span className="text-gray-800 md:text-xl">
+                Portfolio Diversification
+              </span>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <FaCheckCircle size={32} className="text-green-500" />
-            <span className="text-gray-800 md:text-xl">
-              Lower correlation with public market
-            </span>
+          {/* Lower correlation */}
+          <div className="flex flex-col items-center gap-2">
+            <div className="p-4 bg-orange-100 rounded-full shadow-sm">
+              <GiChart size={48} className="text-orange-500" />
+            </div>
+            <div className="flex items-center gap-2">
+              {/* <FaCheckCircle size={20} className="text-green-500" /> */}
+              <span className="text-gray-800 md:text-xl">
+                Lower correlation with public market
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -140,8 +159,8 @@ const AboutUs = () => {
               Our Vision
             </h2>
             <p className="text-[#999] text-lg md:text-xl xl:text-2xl text-justify w-full md:w-[95%] lg:w-[95%] mx-auto md:mx-0">
-              At Alpha Capital, we aim to make investing in unlisted shares,
-              pre-IPO opportunities, and startups seamless, transparent, and
+              At Alpha Capital, we aim to make investing in Unlisted Shares,
+              Pre-IPO opportunities, and startups seamless, transparent, and
               rewarding. Our vision is to be a trusted partner, connecting
               investors with high-potential opportunities while ensuring
               integrity and long-term growth. By simplifying access to
@@ -332,7 +351,7 @@ const AboutUs = () => {
       {/* ONE SECTION REMAINING */}
       <div className="bg-[#1597ac] text-white flex flex-col sm:flex-row justify-evenly items-center text-center sm:text-left py-10 px-8">
         <p className="text-lg sm:text-xl md:text-3xl font-semibold">
-          Interested in investing in unlisted shares? Get started today!
+          Interested in investing in Unlisted Shares? Get started today!
         </p>
         <button
           className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
@@ -353,7 +372,7 @@ const AboutUs = () => {
           </div>
           <div className="text-center md:text-left">
             <p className="text-xl md:text-2xl font-semibold text-gray-900 mb-4">
-              Need clarity? We’ve answered it all for you! - explore our FAQs!
+              Need Clarity? We’ve answered it all for you! - explore our FAQs!
             </p>
             <button
               className="bg-[#1699B1] text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition"
