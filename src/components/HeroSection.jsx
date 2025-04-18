@@ -9,7 +9,7 @@ const afterColonTexts = ["One Platform", "Multiple Brokers", "Best Deals"];
 
 const logos = [
   "/images/OYO.png",
-  "/images/nsdl.png",
+  "/images/nsdL.png",
   "/images/apollo.jpeg",
   "/images/msei.png",
   "/images/PD.png",
@@ -57,7 +57,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         {/* Background Video as YouTube Embed */}
         <video
           className="absolute inset-0 w-full h-full object-cover z-0  "
-          src="./images/bgOfAlpha.mp4"
+          src="./images/animation.mp4"
           autoPlay
           loop
           muted
@@ -99,7 +99,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -30, opacity: 0 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
-                  className="absolute left-0 sm:left-auto text-white font-bold text-center sm:text-left w-full"
+                  className="absolute left-0 sm:left-auto text-[#1df0bb]   font-bold text-center sm:text-left w-full"
                 >
                   {afterColonTexts[currentIndex]}
                 </motion.span>
@@ -121,10 +121,9 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
           >
             <HiOutlineUserGroup className="md:text-2xl text-xl" />
           </button>
-
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-            onClick={() => window.open("https://wa.me/1234567890", "_blank")} // replace with real number when needed
+            onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")} // replace with real number when needed
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
@@ -163,7 +162,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
                 key={`company-${index}`}
                 className="mx-12 flex flex-col items-center justify-center"
               >
-                <div className="hover:grayscale-0 transition-all duration-200 pb-[2rem]">
+                <div className="hover:grayscale-0 transition-all duration-200 pb-[2rem] h-full w-full">
                   <img
                     src={logo || "/placeholder.svg"}
                     alt={`Logo ${index}`}

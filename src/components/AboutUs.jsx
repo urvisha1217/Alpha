@@ -69,7 +69,7 @@ const AboutUs = () => {
           </button>
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-            onClick={() => window.open("https://wa.me/1234567890", "_blank")} // replace with real number when needed
+            onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")} // replace with real number when needed
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>

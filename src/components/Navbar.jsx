@@ -10,10 +10,15 @@ export default function Navbar() {
     <nav className="shadow-md w-full">
       <div className="container mx-auto h-24 px-2 lg:px-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <img src="/images/Logo.png" className="" />
-        </div>
+        </div> */}
 
+        <div className="flex items-center">
+          <Link to="/">
+            <img src="/images/Logo.png" alt="Logo" className="cursor-pointer" />
+          </Link>
+        </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-black text-lg font-bold">
           {[
@@ -27,7 +32,9 @@ export default function Navbar() {
               key={item.path}
               to={item.path}
               className={`${
-                location.pathname === item.path ? "text-green-500" : "hover:text-green-500"
+                location.pathname === item.path
+                  ? "text-green-500"
+                  : "hover:text-green-500"
               }`}
             >
               {item.label}
@@ -37,7 +44,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-black focus:outline-none"
+          >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -58,7 +68,9 @@ export default function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={`${
-                  location.pathname === item.path ? "text-green-500" : "hover:text-green-500"
+                  location.pathname === item.path
+                    ? "text-green-500"
+                    : "hover:text-green-500"
                 }`}
                 onClick={() => setIsOpen(false)}
               >

@@ -249,7 +249,7 @@ export default function ContactUs() {
           </button>
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-            onClick={() => window.open("https://wa.me/1234567890", "_blank")}
+            onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")}
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
@@ -317,21 +317,30 @@ export default function ContactUs() {
             <div className="bg-black text-white p-2 rounded-full">
               <FaEnvelope className="text-sm" />
             </div>
-            <p className="md:text-md text-sm ml-3">
+            <a
+              href="mailto:deals.alphacapital@outlook.com"
+              className="md:text-md text-sm ml-3 text-black hover:underline"
+            >
               deals.alphacapital@outlook.com
-            </p>
+            </a>
           </div>
         </div>
+
         <div className="flex flex-col border p-5 sm:p-7 border-gray-200 rounded-md">
           <span className="font-bold text-lg">Address</span>
           <div className="flex flex-row mt-3 items-center">
             <div className="bg-black text-white p-2 rounded-full">
               <FaMapMarkerAlt className="text-sm" />
             </div>
-            <p className="md:text-md text-sm ml-3">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Silver+Business+Point,+2007,+VIP+Cir+To+Utran+Rd,+Mota+Varachha,+Surat,+Gujarat+394105"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:text-md text-sm ml-3 text-black hover:underline"
+            >
               Silver Business Point, 2007, VIP Cir To Utran Rd, Mota Varachha,
               Surat, Gujarat 394105
-            </p>
+            </a>
           </div>
         </div>
       </div>
