@@ -14,7 +14,7 @@ const logos = [
   "/images/msei.png",
   "/images/PD.png",
   "/images/sbs.jpeg",
-  "/images/ES.png",
+  "/images/Eq.jpg",
   "/images/onix.png",
   "/images/hci.png",
   "/images/HDFC.png",
