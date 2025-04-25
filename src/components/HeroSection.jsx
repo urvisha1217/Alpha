@@ -57,7 +57,7 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         {/* Background Video as YouTube Embed */}
         <video
           className="absolute inset-0 w-full h-full object-cover z-0  "
-          src="./images/animation.mp4"
+          src="./images/BgVideo.mp4"
           autoPlay
           loop
           muted
