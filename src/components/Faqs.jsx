@@ -174,7 +174,7 @@ const Faqs = () => {
       {/* Floating Icons */}
       <div className="fixed bottom-6 right-6 md:top-[30rem]  md:right-10 flex flex-col space-y-3 z-20">
         <button
-          className="md:p-4 p-3 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg"
+          className="md:p-4 p-3 bg-[#1699B1] text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer"
           onClick={() =>
             window.open(
               "https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX",
@@ -185,7 +185,7 @@ const Faqs = () => {
           <HiOutlineUserGroup className="md:text-2xl text-xl" />
         </button>
         <button
-          className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
+          className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer"
           onClick={() =>
             window.open(
               "https://chat.whatsapp.com/+91 6356560080",
