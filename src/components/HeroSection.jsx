@@ -123,7 +123,12 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
           </button>
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-            onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")} // replace with real number when needed
+            onClick={() =>
+              window.open(
+                "https://chat.whatsapp.com/+91 6356560080",
+                "_blank"
+              )
+            } // replace with real number when needed
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
@@ -133,13 +138,13 @@ export default function HeroSection({ direction = "left", speed = 50 }) {
         <div className="container mx-auto text-left px-4 lg:px-8">
           <h2 className="text-lg md:text-3xl font-bold text-black text-justify">
             Alpha Capital is India’s 1<sup>st</sup> multi-broker integrated
-            platform for your Unlisted Shares, Startups & Pre-IPO Investment.
+            platform for your Unlisted Shares, Pre-IPO and Startups Investment.
           </h2>
           <p className="mt-4 text-gray-700 text-sm md:text-lg text-justify">
             At Alpha Capital, we bridge the gap between investors and brokers,
-            offering a streamlined Platform for Unlisted Shares, Pre-IPO Shares,
-            and startup investments. Our integrated platform ensures you benefit
-            from competitive deals through partnerships with trusted brokers. So
+            offering a streamlined Platform for Unlisted Shares, Pre-IPO and
+            Startups Investment. Our integrated platform ensures you benefit from
+            competitive deals through partnerships with trusted brokers. So
             maximize your investment potential with access to the best deals.
           </p>
         </div>

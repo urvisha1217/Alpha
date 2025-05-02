@@ -249,7 +249,9 @@ export default function ContactUs() {
           </button>
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-            onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")}
+            onClick={() =>
+              window.open("https://chat.whatsapp.com/+91 6356560080", "_blank")
+            }
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
@@ -306,7 +308,7 @@ export default function ContactUs() {
             <div className="ml-3 flex flex-col text-sm md:text-md">
               <p className="pr-3">+91 97239 89595</p>
               <p className="pr-3">+91 63565 60080</p>
-              <p>+91 97246 05988</p>
+              {/* <p>+91 97246 05988</p> */}
             </div>
           </div>
         </div>

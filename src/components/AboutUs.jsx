@@ -32,12 +32,12 @@ const AboutUs = () => {
             About Us
           </h2>
           <p className="text-[#999] mb-4 text-justify text-lg xl:text-xl">
-            Alpha Capital simplifies investments in Unlisted Shares, Pre-IPO
-            Shares, and Start-ups investments by bringing together top brokers
-            on a single platform, ensuring you access the best prices and deals
-            in the market. Our platform connects you with multiple leading
-            brokers, offering unbeatable deals and seamless investment
-            opportunities for maximum returns.
+            Alpha Capital simplifies investments in Unlisted Shares, Pre-IPO and
+            Startups Investment by bringing together top brokers on a single
+            platform, ensuring you access the best prices and deals in the
+            market. Our platform connects you with multiple leading brokers,
+            offering unbeatable deals and seamless investment opportunities for
+            maximum returns.
           </p>
           <p className="text-[#999] mb-4 text-justify text-lg xl:text-xl">
             By partnering with the industry’s top brokers, we provide a
@@ -47,8 +47,8 @@ const AboutUs = () => {
           </p>
           <p className="text-[#999]  text-justify text-lg xl:text-xl">
             At Alpha Capital, we bridge the gap between investors and brokers,
-            offering a streamlined platform for Unlisted Shares, Pre-IPO Shares,
-            and startup investments. Our integrated platform ensures you benefit
+            offering a streamlined platform for Unlisted Shares, Pre-IPO and
+            Startups Investment. Our integrated platform ensures you benefit
             from competitive deals through partnerships with trusted brokers.
             Maximize your investment potential with access to the best deals.
           </p>
@@ -69,7 +69,9 @@ const AboutUs = () => {
           </button>
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-            onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")} // replace with real number when needed
+            onClick={() =>
+              window.open("https://chat.whatsapp.com/+91 6356560080", "_blank")
+            } // replace with real number when needed
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
@@ -89,7 +91,7 @@ const AboutUs = () => {
         <div className="mb-8 lg:mb-12">
           <div className="bg-green-100 px-8 py-4 rounded-full">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center">
-              Why consider Pre-IPO investing?
+              Why Consider Pre-IPO Investing?
             </h2>
           </div>
         </div>
@@ -196,7 +198,7 @@ const AboutUs = () => {
           <div className="mb-8 flex flex-col justify-center items-center">
             <div className="bg-green-100 px-8 py-6 rounded-full">
               <h2 className="text-xl md:text-2xl xl:text-3xl font-bold text-gray-900 text-center">
-                Why choose Alpha Capital?
+                Why Choose Alpha Capital?
               </h2>
             </div>
             <p className="text-[#999] mt-4 text-center text-xl xl:text-2xl">
@@ -280,7 +282,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-3">
           {/* Step 1 */}
           <div className="flex flex-col items-center">
-            <div className="bg-[#F97F0433] p-3 rounded-full mb-4">
+            <div className="bg-[#f97e0418] p-3 rounded-full mb-4">
               <img src="/images/connection1.png" size={40} />
             </div>
             <p className="text-gray-800 text-lg text-center">Connect With Us</p>
@@ -294,7 +296,7 @@ const AboutUs = () => {
 
           {/* Step 2 */}
           <div className="flex flex-col items-center">
-            <div className="bg-[#ED06AB33] p-3 rounded-full mb-4">
+            <div className="bg-[#ed06ab13] p-3 rounded-full mb-4">
               <img src="/images/deal1.png" size={40} />
             </div>
             <p className="text-gray-800 text-lg text-center">
@@ -310,7 +312,7 @@ const AboutUs = () => {
 
           {/* Step 3 */}
           <div className="flex flex-col items-center">
-            <div className="bg-[#00CDF233] p-3 rounded-full shadow-lg mb-4">
+            <div className="bg-[#00cef21a] p-3 rounded-full shadow-lg mb-4">
               <img src="/images/share1.png" size={41} />
             </div>
             <p className="text-gray-800 text-lg text-center">Fund Transfer</p>
@@ -324,7 +326,7 @@ const AboutUs = () => {
 
           {/* Step 4 */}
           <div className="flex flex-col items-center">
-            <div className="bg-[#7B61FF33] p-3 rounded-full shadow-lg mb-4">
+            <div className="bg-[#7b61ff1a] p-3 rounded-full shadow-lg mb-4">
               <img src="/images/paper1.png" size={41} />
             </div>
             <p className="text-gray-800 text-lg text-center">Documentation</p>
@@ -338,7 +340,7 @@ const AboutUs = () => {
 
           {/* Step 5 */}
           <div className="flex flex-col items-center">
-            <div className="bg-[#25B34A33] p-3 rounded-full shadow-lg mb-4">
+            <div className="bg-[#25b34b1e] p-3 rounded-full shadow-lg mb-4">
               <img src="/images/digital-product1.png" size={41} />
             </div>
             <p className="text-gray-800 text-lg text-center">
@@ -351,7 +353,7 @@ const AboutUs = () => {
       {/* ONE SECTION REMAINING */}
       <div className="bg-[#1597ac] text-white flex flex-col sm:flex-row justify-evenly items-center text-center sm:text-left py-10 px-8">
         <p className="text-lg sm:text-xl md:text-3xl font-semibold">
-          Interested in investing in Unlisted Shares? Get started today!
+          Beat the Market – Invest in Unlisted Shares Before the Crowd!
         </p>
         <button
           className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "

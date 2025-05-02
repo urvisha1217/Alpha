@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Can a retail investor buy unlisted shares?",
     answer:
-      "Yes, we at Unlisted Arena facilitate investment to retail as well as HNI Investors.",
+      "Yes, we at Alpha Capital  facilitate investment to retail as well as HNI Investors.",
   },
   {
     question: "What is the minimum amount required to invest?",
     answer:
-      "Every unlisted shares have different minimum investment. However, we at Unlisted Arena strive to keep the minimum investment limit as low as possible. On an average minimum investment can be in range of INR 25000-50000.",
+      "Every unlisted shares have different minimum investment. However, we at Alpha Capital  strive to keep the minimum investment limit as low as possible. On an average minimum investment can be in range of INR 25000-50000.",
   },
   {
     question: "How to buy unlisted shares?",
@@ -87,7 +87,7 @@ const faqs = [
     question:
       "How much time does it take to get shares credited in my demat account?",
     answer:
-      "We at Unlisted Arena are the fastest in terms of delivering the shares. The shares usually gets transferred on the same working day in most cases or the next working day.",
+      "We at Alpha Capital  are the fastest in terms of delivering the shares. The shares usually gets transferred on the same working day in most cases or the next working day.",
   },
   {
     question: "How to check my holdings of Unlisted/Pre-IPO shares?",
@@ -97,7 +97,7 @@ const faqs = [
   {
     question: "How do I check latest rates of Unlisted/Pre-IPO Shares?",
     answer:
-      "Although, there is no official source to check rates of Unlisted/Pre-IPO shares (as there is no uniform rate in unlisted market) We at Unlisted Arena regularly update rates on our website and telegram channel",
+      "Although, there is no official source to check rates of Unlisted/Pre-IPO shares (as there is no uniform rate in unlisted market) We at Alpha Capital  regularly update rates on our  Whatsapp community",
   },
   {
     question:
@@ -186,7 +186,12 @@ const Faqs = () => {
         </button>
         <button
           className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg"
-          onClick={() => window.open("https://chat.whatsapp.com/HU0ANXzpvF4HiDWuDpeebX", "_blank")} // replace with real number when needed
+          onClick={() =>
+            window.open(
+              "https://chat.whatsapp.com/+91 6356560080",
+              "_blank"
+            )
+          } // replace with real number when needed
         >
           <BsWhatsapp className="md:text-2xl text-xl" />
         </button>

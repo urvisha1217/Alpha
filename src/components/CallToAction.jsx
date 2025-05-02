@@ -13,7 +13,7 @@ const CallToAction = () => {
         className="mt-4 sm:mt-0 sm:ml-10 bg-white text-[#1597ac] w-full  sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
         onClick={() => navigate("/ContactUs")}
       >
-        Call Now
+        Contact Us
       </button>
     </div>
   );

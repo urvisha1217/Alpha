@@ -1,5 +1,10 @@
 import React from "react";
-import { FaChevronUp, FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
+import {
+  FaChevronUp,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -43,7 +48,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Right Section - Policy */}  
+        {/* Right Section - Policy */}
         <div className="text-center md:text-left w-full md:w-1/4">
           <h3 className="font-bold text-xl mb-3">Policy</h3>
           <ul className="lg:text-lg text-md space-y-2">
@@ -116,7 +121,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://www.linkedin.com/company/alphacapital-pvtltd/"
+              href="https://www.linkedin.com/in/pruthvi-vaghasiya-b00a48355"
               target="_blank"
               rel="alpha capital"
             >
