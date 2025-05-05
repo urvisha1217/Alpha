@@ -357,7 +357,12 @@ const AboutUs = () => {
         </p>
         <button
           className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
-          onClick={() => navigate("/ContactUs")}
+          onClick={() =>
+            window.open(
+              "https://wa.me/+916356560080?text=I+am+interested+in+Pre-IPO+Shares",
+              "_blank"
+            )
+          }
         >
           Get in touch
         </button>

@@ -443,7 +443,7 @@ const UnlistedShares = () => {
           "_blank"
         )}
       >
-        Get Complete List
+        Explore Full List
       </button>
     </div>
   );
