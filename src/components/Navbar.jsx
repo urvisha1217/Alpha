@@ -23,9 +23,9 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 text-black text-lg font-bold">
           {[
             { path: "/", label: "Home" },
-            { path: "/AboutUs", label: "About us" },
+            { path: "/AboutUs", label: "About Us" },
             { path: "/UnlistedShares", label: "Unlisted Shares" },
-            { path: "/ContactUs", label: "Contact us" },
+            { path: "/ContactUs", label: "Contact Us" },
             { path: "/Faqs", label: "FAQs" },
           ].map((item) => (
             <Link

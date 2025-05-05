@@ -40,10 +40,10 @@ const Footer = () => {
               <Link to="/UnlistedShares">Unlisted Shares</Link>
             </li>
             <li>
-              <Link to="/AboutUs">About us</Link>
+              <Link to="/AboutUs">About Us</Link>
             </li>
             <li>
-              <Link to="/ContactUs">Contact us</Link>
+              <Link to="/ContactUs">Contact Us</Link>
             </li>
           </ul>
         </div>

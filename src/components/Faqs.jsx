@@ -5,7 +5,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const faqs = [
   {
-    question: "What Are unlisted/Pre IPO Shares?",
+    question: "What Are Unlisted/Pre IPO Shares?",
     answer:
       "Unlisted Shares are shares that are not traded/listed on stock exchanges. However, they are traded over-the-counter in Unlisted Market which is also called Private Market. There are certain companies whose shares are available in unlisted market before their IPO. Investing in such companies is called Pre-IPO Investing.",
   },
@@ -16,7 +16,7 @@ const faqs = [
   },
 
   {
-    question: "Are the Unlisted shares in demat form?",
+    question: "Are the Unlisted Shares in demat form?",
     answer:
       "Yes, all the Unlisted Shares in which we deal are in demat form, same as any listed shares. When an investor buys this unlisted shares, they are reflected in their demat account instantly.",
   },
@@ -26,17 +26,17 @@ const faqs = [
       "Any company, be it listed or unlisted can have its shares dematerialized with depositories (NSDL and/or CDSL). Listed shares are tradeable on stock exchange while Unlisted Shares are traded in over-the-counter/Private Market. Hence listed and unlisted shares, are both stored in demat account only.",
   },
   {
-    question: "What are the benefits of buying Pre-IPO shares?",
+    question: "What are the benefits of buying Pre-IPO Shares?",
     answer:
       " Early-stage investment, High growth potential,Diversification,Exclusive access ",
   },
   {
-    question: "What are the risks of investing in Unlisted/Pre-IPO shares?",
+    question: "What are the risks of investing in Unlisted/Pre-IPO Shares?",
     answer:
       "Illiquidity ,Regulatory ,IPO uncertainty ,Valuation , Lock-in period ",
   },
   {
-    question: "Can a retail investor buy unlisted shares?",
+    question: "Can a retail investor buy Unlisted Shares?",
     answer:
       "Yes, we at Alpha Capital  facilitate investment to retail as well as HNI Investors.",
   },
@@ -46,7 +46,7 @@ const faqs = [
       "Every unlisted shares have different minimum investment. However, we at Alpha Capital  strive to keep the minimum investment limit as low as possible. On an average minimum investment can be in range of INR 25000-50000.",
   },
   {
-    question: "How to buy unlisted shares?",
+    question: "How to buy Unlisted Shares?",
     answer: (
       <>
         <span className="font-semibold">1️⃣ Connect with Us:</span> Inquire about
@@ -68,29 +68,29 @@ const faqs = [
     ),
   },
   {
-    question: "How to sell unlisted shares?",
+    question: "How to sell Unlisted Shares?",
     answer:
       "One can sell Unlisted/Pre-IPO shares anytime before its IPO to any buyer in unlisted market. We may buy such unlisted shares if we have a buying interest. The Pre-IPO shares gets locked for a period of six months from date of its IPO allotment.",
   },
   {
-    question: "What is the lock-in period for Pre-IPO shares?",
+    question: "What is the lock-in period for Pre-IPO Shares?",
     answer:
       "As per the SEBI rule, the unlisted shares of the companies listing on the mainboard have a lock-in period of 6 months starting from the IPO. Post six months, the shares will get free from lock automatically in your demat account and you will be free to sell those shares just like selling any other listed stocks on exchanges. The unlisted shares of the companies  listing on SME platform are locked for a period of 1 year.",
   },
   {
     question:
-      "Do I need to open any separate demat account for buying Unlisted/Pre-IPO shares?",
+      "Do I need to open any separate demat account for buying Unlisted/Pre-IPO Shares?",
     answer:
       "Absolutely No. You do not need to open separate demat account for buying Unlisted/Pre-IPO shares. Your existing demat account is sufficient to buy and hold such shares",
   },
   {
     question:
-      "How much time does it take to get shares credited in my demat account?",
+      "How much time does it take to get Shares credited in my demat account?",
     answer:
       "We at Alpha Capital  are the fastest in terms of delivering the shares. The shares usually gets transferred on the same working day in most cases or the next working day.",
   },
   {
-    question: "How to check my holdings of Unlisted/Pre-IPO shares?",
+    question: "How to check my holdings of Unlisted/Pre-IPO Shares?",
     answer:
       "Once the shares gets transferred to your demat account you can easily check it in your Depository Holdings- also called DP Holdings (in your demat account (in mobile/desktop login of your broker. One can also check the shares by installing CDSL/NSDL app on real time basis",
   },
@@ -101,22 +101,22 @@ const faqs = [
   },
   {
     question:
-      "What is the time horizon for investment in Unlisted/Pre-IPO shares usually?",
+      "What is the time horizon for investment in Unlisted/Pre-IPO Shares usually?",
     answer:
       "Usually, Unlisted/Pre-IPO Investments are more feasible for long term.",
   },
   {
-    question: "Are buying and selling of Pre-IPO shares taxable?",
+    question: "Are buying and selling of Pre-IPO Shares taxable?",
     answer:
       "Short-term (≤24 months) – Taxed as per income slab., Long-term (>24 months) – 20% tax with indexation.,NRIs – TDS applies on gains.",
   },
   {
-    question: "What are the documents required for buying Pre-IPO shares?",
+    question: "What are the documents required for buying Pre-IPO Shares?",
     answer:
       "PAN Card,NRE/NRO Bank & Demat Account,Overseas Address Proof,KYC Documents (Passport, Visa, etc.)",
   },
   {
-    question: "Can NRI investors buy Pre-IPO shares?",
+    question: "Can NRI investors buy Pre-IPO Shares?",
     answer: "Yes, NRI investors can buy Pre-IPO shares in India",
   },
 ];
