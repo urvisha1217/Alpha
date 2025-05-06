@@ -188,10 +188,10 @@ const Faqs = () => {
           className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer"
           onClick={() =>
             window.open(
-              "https://chat.whatsapp.com/+91 6356560080",
+              "https://wa.me/+916356560080?text=I+am+interested+in+Pre-IPO+Shares",
               "_blank"
             )
-          } // replace with real number when needed
+          }
         >
           <BsWhatsapp className="md:text-2xl text-xl" />
         </button>

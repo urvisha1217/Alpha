@@ -19,9 +19,6 @@ function App() {
         <Route path="/Faqs" element={<FaqsPage />} />
         <Route path="/ContactUs" element={<ContactUsPage />} />
         <Route path="/AboutUs" element={<AboutUsPage />} />
-        {/* <Route path="/PrivacyPolicy" element={<DisclaimerPolicy />} />
-        <Route path="/Disclaimer" element={<DisclaimerPolicy />} />
-        <Route path="/TermsConditions" element={<TermsConditions />} /> */}
       </Routes>
       <Footer />
     </Router>

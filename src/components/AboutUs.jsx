@@ -2,7 +2,7 @@ import React from "react";
 import { FaCheckCircle, FaLightbulb, FaBullseye } from "react-icons/fa";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GiReceiveMoney, GiPieChart, GiChart } from "react-icons/gi";
 
 const AboutUs = () => {
@@ -70,8 +70,11 @@ const AboutUs = () => {
           <button
             className="md:p-4 p-3 bg-[#16A569] text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer"
             onClick={() =>
-              window.open("https://chat.whatsapp.com/+91 6356560080", "_blank")
-            } // replace with real number when needed
+              window.open(
+                "https://wa.me/+916356560080?text=I+am+interested+in+Pre-IPO+Shares",
+                "_blank"
+              )
+            }
           >
             <BsWhatsapp className="md:text-2xl text-xl" />
           </button>
@@ -355,17 +358,13 @@ const AboutUs = () => {
         <p className="text-lg sm:text-xl md:text-3xl font-semibold">
           Beat the Market – Invest in Unlisted Shares Before the Crowd!
         </p>
+        <Link to="/ContactUs" >
         <button
-          className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black  w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
-          onClick={() =>
-            window.open(
-              "https://wa.me/+916356560080?text=I+am+interested+in+Pre-IPO+Shares",
-              "_blank"
-            )
-          }
-        >
+          className="mt-4 sm:mt-0 sm:ml-10 bg-white text-black cursor-pointer w-full sm:w-64 md:w-80 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transition "
+        > 
           Get in touch
         </button>
+        </Link>
       </div>
       {/* FAQ Section */}
       <div className="container mx-auto">
