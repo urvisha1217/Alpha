@@ -11,7 +11,7 @@ const ContactPoster = () => {
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white px-4 text-center">
         <h1 className="text-2xl md:text-5xl font-bold">Connect with us</h1>
         <p className="text-sm md:text-3xl mt-1  md:mt-3 tracking-wide">
-          Let's find hidden Multibagger together
+          Let's find Hidden Multibagger together
         </p>
       </div>
     </div>
