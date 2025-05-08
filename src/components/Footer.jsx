@@ -13,13 +13,13 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-[#ECECEC] py-10">
+    <div className="bg-[#ECECEC] py-5 md:py-10">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-6 md:px-4 md:gap-5 lg:gap-0 ">
         {/* Left Section - Logo and Copyright */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/3 mb-6 md:mb-0">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center justify-center gap-2 mb-2">
             <img
-              src="/images/logo2.png"
+              src="/images/ACLogo.png"
               alt="Alpha Capital Logo"
               className="h-20 lg:h-27"
             />

@@ -16,7 +16,7 @@ export default function Navbar() {
 
         <div className="flex items-center">
           <Link to="/">
-            <img src="/images/Logo.png" alt="Logo" className="cursor-pointer" />
+            <img src="/images/ACLogo.png" alt="Logo" className="w-48 h-20 object-cover cursor-pointer" />
           </Link>
         </div>
         {/* Desktop Menu */}
